@@ -1,0 +1,15 @@
+workspace:
+  base: /data/drone-demo
+  path: .
+
+pipeline:
+  build:
+     image: webdevops/php-nginx
+
+     environment:
+       - KEY=VALUE
+     secrets: [key1, key2]
+     commands:
+       - echo $$KEY
+       - pwd
+       - ls
